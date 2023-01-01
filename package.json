@@ -1,21 +1,27 @@
 {
   "name": "react-native-i18n-new",
-  "version": "2.0.17",
-  "description": "Provide I18n-new to your React Native application",
-  "license": "MIT",
-  "author": "Mohammed Farhan",
+  "version": "1.0.0",
+  "description": "<img src=\"https://cdn0.iconfinder.com/data/icons/material-design-ii-glyph/614/3010_-_Translate-512.png\" width=\"100\" align=\"left\" />",
   "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "example": "example"
+  },
+  "dependencies": {
+    "i18n-js": "^3.0.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
-    "url": "github.com/MhamadHFarhan/react-native-i18n-new.git"
+    "url": "git+https://github.com/MhamadHFarhan/react-native-i18n-new.git"
   },
-  "keywords": [
-    "react-native",
-    "react-component",
-    "ios",
-    "i18n"
-  ],
-  "dependencies": {
-    "i18n-js": "3.0.11"
-  }
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MhamadHFarhan/react-native-i18n-new/issues"
+  },
+  "homepage": "https://github.com/MhamadHFarhan/react-native-i18n-new#readme"
 }
