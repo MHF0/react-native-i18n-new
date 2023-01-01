@@ -38,64 +38,6 @@ and run
 pod install
 ```
 
-## Manual setup
-
-### iOS
-
-Add `RNI18n.xcodeproj` to **Libraries** and add `libRNI18n.a` to **Link Binary With Libraries** under **Build Phases**.  
-[More info and screenshots about how to do this is available in the React Native documentation](http://facebook.github.io/react-native/docs/linking-libraries-ios.html#content).
-
-You also need to add the **localizations** you intend to support to your iOS project. To do that open your Xcode project:
-
-```
-$ open <your-project>.xcodeproj
-```
-
-And add the localizations you will support as shown here:
-
-![adding locales](https://github.com/AlexanderZaytsev/react-native-i18n/blob/master/docs/adding-locales.png?raw=true)
-
-### Android
-
-Add `react-native-i18n-new` to your `./android/settings.gradle` file as follows:
-
-```gradle
-include ':app', ':react-native-i18n-new'
-project(':react-native-i18n-new').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-i18n-new/android')
-```
-
-Include it as dependency in `./android/app/build.gradle` file:
-
-```gradle
-dependencies {
-    // ...
-    compile project(':react-native-i18n-new')
-}
-```
-
-Finally, you need to add the package to your MainApplication (`./android/app/src/main/java/your/bundle/MainApplication.java`):
-
-```java
-import com.AlexanderZaytsev.RNI18n.RNI18nPackage; // <-- Add to ReactNativeI18n to the imports
-
-// ...
-
-@Override
-protected List<ReactPackage> getPackages() {
-    return Arrays.<ReactPackage>asList(
-        new MainReactPackage(),
-        // ...
-        new RNI18nPackage(), // <-- Add it to the packages list
-    );
-}
-
-// ...
-```
-
-After that, you will need to recompile your project with `react-native run-android`.
-
-**⚠️ Important: You'll need to install Android build tools 27.0.3**
-
 ## Usage
 
 ```javascript
